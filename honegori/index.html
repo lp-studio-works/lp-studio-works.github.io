@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ほねごりmini整体院 福生駅前院 | 姿勢と骨格から整える整体</title>
+<meta name="description" content="揉むだけでは終わらない、姿勢・骨格からの根本ケア。ほねごりmini整体院 福生駅前院。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#20242b;
+    --ink-soft:#565c66;
+    --paper:#f5f2ec;
+    --paper-deep:#eae4d6;
+    --card:#fbf9f4;
+    --pine:#3f6357;
+    --pine-deep:#2c473e;
+    --amber:#c08a45;
+    --line:rgba(32,36,43,0.14);
+    --shadow:0 18px 40px -22px rgba(32,36,43,0.35);
+    --radius:2px;
+    --bar-h:76px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+    line-height:1.9;
+    letter-spacing:0.02em;
+    padding-bottom:var(--bar-h);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:'Zen Old Mincho', serif;
+    font-weight:700;
+    margin:0;
+    letter-spacing:0.03em;
+  }
+  p{margin:0;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:0.72rem;letter-spacing:0.22em;
+    color:var(--pine-deep);font-weight:500;
+  }
+  .eyebrow::before{ content:""; width:18px;height:1px; background:var(--pine-deep); }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:16px 34px;background:var(--pine-deep);color:var(--paper);
+    text-decoration:none;font-size:0.95rem;letter-spacing:0.08em;
+    border-radius:var(--radius);border:1px solid var(--pine-deep);
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    box-shadow:var(--shadow);
+  }
+  .btn:hover{ transform:translateY(-2px); background:var(--pine); }
+  .btn--ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none; }
+  .btn--ghost:hover{ border-color:var(--pine-deep); background:rgba(63,99,87,0.06); }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar{ position:sticky; top:0; z-index:40; background:rgba(245,242,236,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
+  .topbar__inner{ max-width:1040px;margin:0 auto;padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brandmark{ display:flex; flex-direction:column; text-decoration:none; line-height:1.3; }
+  .brandmark__main{ font-family:'Zen Old Mincho', serif; font-size:1.02rem; color:var(--ink); }
+  .brandmark__sub{ font-size:0.64rem; letter-spacing:0.14em; color:var(--ink-soft); }
+  .topbar__status{ font-size:0.7rem; letter-spacing:0.05em; color:var(--ink-soft); display:flex; align-items:center; gap:6px; text-align:right; }
+  .dot{ width:6px;height:6px;border-radius:50%; background:var(--pine); flex:none; }
+
+  /* ---------- hero ---------- */
+  .hero{ position:relative; overflow:hidden; padding:64px 0 76px; border-bottom:1px solid var(--line); }
+  .hero__inner{ position:relative; max-width:640px; }
+  .hero h1{ margin-top:18px; font-size:clamp(2rem, 6vw, 3.1rem); line-height:1.5; color:var(--ink); }
+  .hero__lead{ margin-top:20px; font-size:1.02rem; color:var(--ink-soft); max-width:30em; }
+  .hero__quote{
+    margin-top:26px; font-size:0.94rem; color:var(--pine-deep);
+    padding:14px 18px; background:var(--paper-deep); border-left:2px solid var(--amber);
+  }
+  .hero__cta{ margin-top:34px; display:flex; flex-wrap:wrap; align-items:center; gap:18px; }
+  .hero__note{ font-size:0.76rem; color:var(--ink-soft); }
+
+  /* ---------- spine motif divider (signature element) ---------- */
+  .spine{ display:block; width:100%; height:40px; margin:0; }
+
+  /* ---------- section basics ---------- */
+  section{ padding:68px 0; }
+  .section__head{ max-width:600px; margin-bottom:44px; }
+  .section__head h2{ margin-top:14px; font-size:clamp(1.45rem, 3.6vw, 2rem); }
+  .section--pine{ background:var(--pine-deep); color:var(--paper); }
+  .section--pine .eyebrow{ color:#c9d6cf; }
+  .section--pine .eyebrow::before{ background:#c9d6cf; }
+  .section--pine h2{ color:var(--paper); }
+
+  /* ---------- reasons ---------- */
+  .reasons{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line); border:1px solid var(--line); }
+  .reason{ background:var(--card); padding:32px 26px 36px; }
+  .reason__mark{ font-family:'Zen Old Mincho', serif; font-size:1.5rem; color:var(--amber); display:block; margin-bottom:14px; }
+  .reason h3{ font-size:1.04rem; color:var(--ink); line-height:1.6; }
+  .reason p{ margin-top:14px; font-size:0.87rem; color:var(--ink-soft); }
+
+  /* ---------- menu ---------- */
+  .menu-list{ border-top:1px solid var(--line); }
+  .menu-row{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; padding:22px 0; border-bottom:1px solid var(--line); }
+  .menu-row__name{ font-size:1rem; font-weight:500; }
+  .menu-row__desc{ font-size:0.8rem; color:var(--ink-soft); margin-top:6px; }
+  .menu-row__price{ font-family:'Zen Old Mincho', serif; font-size:1.12rem; white-space:nowrap; color:var(--pine-deep); }
+  .menu-note{ margin-top:24px; font-size:0.8rem; color:var(--ink-soft); background:var(--paper-deep); padding:18px 20px; border-left:2px solid var(--amber); }
+  .menu-note + .menu-note{ margin-top:12px; }
+
+  /* ---------- voices ---------- */
+  .voices{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .voice{ background:rgba(255,255,255,0.06); border:1px solid rgba(245,242,236,0.22); padding:28px 24px; border-radius:var(--radius); }
+  .voice__mark{ font-family:'Zen Old Mincho', serif; font-size:2rem; color:var(--amber); line-height:1; display:block; margin-bottom:6px; }
+  .voice p{ font-size:0.9rem; }
+  .voice__who{ margin-top:16px; font-size:0.74rem; letter-spacing:0.05em; color:#d5ddd9; }
+  .voices-note{ margin-top:20px; font-size:0.72rem; color:#c2ccc6; }
+
+  /* ---------- access ---------- */
+  .access{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:start; }
+  .access dl{ margin:0; }
+  .access-row{ display:grid; grid-template-columns:96px 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--line); }
+  .access-row dt{ font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.05em; }
+  .access-row dd{ margin:0; font-size:0.94rem; }
+  .map-box{
+    aspect-ratio:4/3;
+    background: repeating-linear-gradient(45deg, var(--paper-deep) 0 2px, transparent 2px 14px), var(--card);
+    border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+    color:var(--ink-soft); font-size:0.75rem; letter-spacing:0.12em;
+  }
+
+  /* ---------- final cta ---------- */
+  .final{ text-align:center; padding:84px 0 92px; }
+  .final h2{ font-size:clamp(1.6rem, 4.2vw, 2.3rem); }
+  .final p{ margin-top:18px; color:var(--ink-soft); max-width:34em; margin-left:auto; margin-right:auto; }
+  .final .btn{ margin-top:32px; }
+
+  footer{ padding:32px 0 24px; border-top:1px solid var(--line); font-size:0.72rem; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+
+  /* ---------- sticky reservation bar ---------- */
+  .stickybar{
+    position:fixed; left:0; right:0; bottom:0; z-index:50;
+    background:var(--card); border-top:1px solid var(--line);
+    box-shadow:0 -14px 30px -18px rgba(32,36,43,0.35);
+    padding:12px 18px calc(12px + env(safe-area-inset-bottom));
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+  }
+  .stickybar__text{ font-size:0.76rem; color:var(--ink-soft); line-height:1.4; }
+  .stickybar__text strong{ display:block; font-size:0.9rem; color:var(--ink); font-weight:500; }
+  .stickybar .btn{ padding:13px 26px; font-size:0.88rem; flex:none; }
+
+  @media (max-width: 860px){
+    .reasons{ grid-template-columns:1fr; }
+    .voices{ grid-template-columns:1fr; }
+    .access{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 600px){
+    section{ padding:52px 0; }
+    .hero{ padding:52px 0 64px; }
+    .topbar__status{ font-size:0.62rem; }
+    .stickybar__text{ font-size:0.68rem; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brandmark" href="#top">
+        <span class="brandmark__main">ほねごりmini整体院</span>
+        <span class="brandmark__sub">福生駅前院</span>
+      </a>
+      <div class="topbar__status"><span class="dot"></span>駅から徒歩3分</div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">完全担当制・駅前立地</p>
+      <h1>痛みの元から、<br>ちゃんと整える。</h1>
+      <p class="hero__lead">その場しのぎのマッサージではなく、姿勢と骨格の歪みから見直す整体です。揉んでもすぐ戻る、その繰り返しを卒業しませんか。</p>
+      <p class="hero__quote">「揉むだけで終わらない」――同じ施術者が、毎回あなたの体の変化を見ながら担当します。</p>
+      <div class="hero__cta">
+        <a class="btn" href="#reserve">空き状況を確認する</a>
+        <a class="btn btn--ghost" href="#menu">メニューを見る</a>
+      </div>
+      <p class="hero__note">駅前立地・仕事帰りにも通いやすい時間帯で受付しています</p>
+    </div>
+  </section>
+
+  <svg class="spine" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+    <circle cx="40" cy="12" r="4" fill="#c08a45"/>
+    <circle cx="140" cy="26" r="4" fill="#c08a45"/>
+    <circle cx="240" cy="10" r="4" fill="#c08a45"/>
+    <circle cx="340" cy="24" r="4" fill="#c08a45"/>
+    <circle cx="440" cy="20" r="4" fill="#3f6357"/>
+    <circle cx="560" cy="20" r="4" fill="#3f6357"/>
+    <circle cx="680" cy="20" r="4" fill="#3f6357"/>
+    <circle cx="800" cy="20" r="4" fill="#3f6357"/>
+    <circle cx="920" cy="20" r="4" fill="#3f6357"/>
+    <circle cx="1040" cy="20" r="4" fill="#3f6357"/>
+    <circle cx="1160" cy="20" r="4" fill="#3f6357"/>
+    <path d="M40 12 Q90 30 140 26 T240 10 T340 24 T440 20" fill="none" stroke="#c08a45" stroke-width="1.2" opacity="0.6"/>
+    <path d="M440 20 L1160 20" fill="none" stroke="#3f6357" stroke-width="1.2" opacity="0.6"/>
+  </svg>
+
+  <!-- ============ REASONS ============ -->
+  <section id="reasons">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">features</p>
+        <h2>選ばれる、3つの理由</h2>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="reasons">
+        <article class="reason reveal">
+          <span class="reason__mark">一</span>
+          <h3>揉むだけで終わらない、原因からのケア</h3>
+          <p>痛みが出ている場所だけでなく、姿勢の歪みやクセを含めて確認し、根本原因にアプローチします。</p>
+        </article>
+        <article class="reason reveal">
+          <span class="reason__mark">二</span>
+          <h3>完全担当制で、毎回説明しなくていい</h3>
+          <p>同じ施術者が継続して担当するので、体の変化を把握したうえで施術を受けられます。</p>
+        </article>
+        <article class="reason reveal">
+          <span class="reason__mark">三</span>
+          <h3>駅前立地・仕事帰りにも通いやすい</h3>
+          <p>遅い時間帯の受付にも対応。予定を詰め込みすぎず、無理なく通える立地です。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <svg class="spine" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 20 L1200 20" fill="none" stroke="#3f6357" stroke-width="1.2" opacity="0.35"/>
+    <circle cx="600" cy="20" r="5" fill="#c08a45"/>
+  </svg>
+
+  <!-- ============ MENU ============ -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">menu</p>
+        <h2>メニューと料金</h2>
+      </div>
+
+      <div class="menu-list reveal">
+        <div class="menu-row">
+          <div>
+            <div class="menu-row__name">初回カウンセリング + 施術</div>
+            <div class="menu-row__desc">姿勢チェック・お悩みのヒアリング込み</div>
+          </div>
+          <div class="menu-row__price">○,○○○円</div>
+        </div>
+        <div class="menu-row">
+          <div>
+            <div class="menu-row__name">整体(通常施術)</div>
+            <div class="menu-row__desc">骨格・姿勢の調整</div>
+          </div>
+          <div class="menu-row__price">○,○○○円</div>
+        </div>
+        <div class="menu-row">
+          <div>
+            <div class="menu-row__name">骨盤調整コース</div>
+            <div class="menu-row__desc">産後・慢性的な歪みが気になる方に</div>
+          </div>
+          <div class="menu-row__price">○,○○○円〜</div>
+        </div>
+      </div>
+
+      <p class="menu-note reveal">※ メニュー・価格は仮の見本です。実際の内容に合わせて差し替えます。</p>
+      <p class="menu-note reveal">※ 効果には個人差があります。カウンセリングで体の状態を確認したうえで施術いたします。</p>
+    </div>
+  </section>
+
+  <!-- ============ VOICES ============ -->
+  <section class="section--pine" id="voices">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">voices</p>
+        <h2>お客様の声</h2>
+      </div>
+      <div class="voices">
+        <div class="voice reveal">
+          <span class="voice__mark">"</span>
+          <p>マッサージだけだったら数日で戻っていましたが、姿勢から見てもらえたのは初めてでした。</p>
+          <div class="voice__who">30代・K様</div>
+        </div>
+        <div class="voice reveal">
+          <span class="voice__mark">"</span>
+          <p>毎回同じ先生に担当してもらえるので、体の変化を分かってもらえている安心感があります。</p>
+          <div class="voice__who">40代・M様</div>
+        </div>
+        <div class="voice reveal">
+          <span class="voice__mark">"</span>
+          <p>駅前で仕事帰りに寄れるのが本当に助かっています。</p>
+          <div class="voice__who">20代・R様</div>
+        </div>
+      </div>
+      <p class="voices-note">※ 個人の感想です。効果・感じ方には個人差があります。掲載する場合は実際のお客様の声に差し替えます。</p>
+    </div>
+  </section>
+
+  <!-- ============ ACCESS ============ -->
+  <section id="access">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <p class="eyebrow">access</p>
+        <h2>アクセス・営業時間</h2>
+      </div>
+      <div class="access reveal">
+        <dl>
+          <div class="access-row">
+            <dt>営業時間</dt>
+            <dd>○○:○○〜○○:○○(仮)</dd>
+          </div>
+          <div class="access-row">
+            <dt>定休日</dt>
+            <dd>○曜日(仮)</dd>
+          </div>
+          <div class="access-row">
+            <dt>住所</dt>
+            <dd>東京都福生市○○ ○-○-○</dd>
+          </div>
+          <div class="access-row">
+            <dt>最寄駅</dt>
+            <dd>福生駅 徒歩3分</dd>
+          </div>
+          <div class="access-row">
+            <dt>駐車場</dt>
+            <dd>○台分あり(仮)</dd>
+          </div>
+        </dl>
+        <div class="map-box">MAP(埋め込み予定)</div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="spine" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 20 L1200 20" fill="none" stroke="#c08a45" stroke-width="1.2" opacity="0.4"/>
+  </svg>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final" id="reserve">
+    <div class="wrap">
+      <p class="eyebrow" style="justify-content:center;">reservation</p>
+      <h2>まずは、体の状態を<br>知ることから。</h2>
+      <p>初めての方も、カウンセリングでしっかりお悩みを伺ってから施術に入ります。ご不安なことは事前にご相談ください。</p>
+      <a class="btn" href="#">予約フォームへ進む</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="width:100%; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+      <span>© ほねごりmini整体院 福生駅前院</span>
+      <span>完全担当制</span>
+    </div>
+  </footer>
+
+  <!-- ============ STICKY RESERVATION BAR ============ -->
+  <div class="stickybar">
+    <div class="stickybar__text">
+      <strong>福生駅 徒歩3分</strong>
+      完全担当制
+    </div>
+    <a class="btn" href="#reserve">予約する</a>
+  </div>
+
+<script>
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var items = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold:0.15 });
+    items.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
