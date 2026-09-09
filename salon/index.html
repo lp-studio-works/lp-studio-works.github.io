@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>凪 nagi hair atelier | 完全予約制ヘアサロン</title>
+<title>結 yui hair atelier | 完全予約制ヘアサロン</title>
 <meta name="description" content="完全ひとり担当制、完全予約制のヘアサロン「結(ゆい) hair atelier」。忙しい毎日に、静かな時間をお届けします。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +90,6 @@
   }
   .btn--ghost:hover{ border-color:var(--sage-deep); background:rgba(110,127,92,0.06); }
 
-  /* ---------- reveal animation ---------- */
   .reveal{ opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
   .reveal.is-visible{ opacity:1; transform:translateY(0); }
   @media (prefers-reduced-motion: reduce){
@@ -98,7 +97,6 @@
     html{ scroll-behavior:auto; }
   }
 
-  /* ---------- top bar ---------- */
   .topbar{
     position:sticky; top:0; z-index:40;
     background:rgba(245,241,231,0.92);
@@ -121,7 +119,6 @@
   }
   .dot{ width:6px;height:6px;border-radius:50%; background:var(--sage); flex:none; }
 
-  /* ---------- hero ---------- */
   .hero{
     position:relative;
     overflow:hidden;
@@ -165,11 +162,9 @@
   }
   .hero__note{ font-size:0.76rem; color:var(--ink-soft); letter-spacing:0.02em; }
 
-  /* ---------- wave divider (signature element) ---------- */
   .divider{ display:block; width:100%; height:34px; }
   .divider--pad{ margin:0; }
 
-  /* ---------- section basics ---------- */
   section{ padding:72px 0; }
   .section__head{ max-width:600px; margin-bottom:44px; }
   .section__head h2{
@@ -181,7 +176,6 @@
   .section--sage .eyebrow::before{ background:#cfd8c3; }
   .section--sage h2{ color:var(--paper); }
 
-  /* ---------- reasons ---------- */
   .reasons{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -211,7 +205,6 @@
     color:var(--ink-soft);
   }
 
-  /* ---------- menu ---------- */
   .menu-list{ border-top:1px solid var(--line); }
   .menu-row{
     display:flex; align-items:baseline; justify-content:space-between; gap:24px;
@@ -236,7 +229,6 @@
   }
   .menu-note + .menu-note{ margin-top:12px; border-left-color:var(--gold); }
 
-  /* ---------- testimonials ---------- */
   .voices{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -269,7 +261,6 @@
     color:#c3cab5;
   }
 
-  /* ---------- access ---------- */
   .access{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:start; }
   .access dl{ margin:0; }
   .access-row{
@@ -289,7 +280,6 @@
     font-size:0.75rem; letter-spacing:0.14em;
   }
 
-  /* ---------- final cta ---------- */
   .final{
     text-align:center;
     padding:88px 0 96px;
@@ -306,7 +296,6 @@
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
   }
 
-  /* ---------- sticky reservation bar ---------- */
   .stickybar{
     position:fixed; left:0; right:0; bottom:0; z-index:50;
     background:var(--card);
@@ -319,7 +308,6 @@
   .stickybar__text strong{ display:block; font-size:0.92rem; color:var(--ink); font-weight:500; }
   .stickybar .btn{ padding:13px 26px; font-size:0.88rem; flex:none; }
 
-  /* ---------- responsive ---------- */
   @media (max-width: 860px){
     .reasons{ grid-template-columns:1fr; }
     .voices{ grid-template-columns:1fr; }
@@ -335,25 +323,23 @@
 </head>
 <body>
 
-  <!-- ============ TOP BAR ============ -->
   <header class="topbar">
     <div class="topbar__inner">
       <a class="brandmark" href="#top">
-        <span class="brandmark__glyph">凪</span>
-        <span class="brandmark__text">nagi hair atelier</span>
+        <span class="brandmark__glyph">結</span>
+        <span class="brandmark__text">yui hair atelier</span>
       </a>
       <div class="topbar__status"><span class="dot"></span>本日 11:00–21:00 営業中</div>
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <div class="hero__ghost" aria-hidden="true">凪</div>
+    <div class="hero__ghost" aria-hidden="true">結</div>
     <div class="wrap hero__inner">
       <p class="eyebrow">完全予約制・1日6名様まで</p>
       <h1>整えるのは、髪じゃなく<br>時間です。</h1>
-      <p class="hero__lead">忙しさに追われる毎日の中に、深呼吸ひとつぶんの余白を。凪(なぎ)は、風が止み海面が静まる瞬間を指す言葉です。</p>
-      <p class="hero__desc">髪を通して、そんな凪の時間をお届けするヘアサロンです。</p>
+      <p class="hero__lead">忙しさに追われる毎日の中に、深呼吸ひとつぶんの余白を。結(ゆい)は、「髪を結う」にも通じる、人と人をつなぐ言葉です。</p>
+      <p class="hero__desc">髪を通して、今のあなたとなりたいあなたを結ぶ時間をお届けするヘアサロンです。</p>
       <div class="hero__cta">
         <a class="btn" href="#reserve">空き状況を確認する</a>
         <a class="btn btn--ghost" href="#menu">料金を見る</a>
@@ -366,7 +352,6 @@
     <path d="M0 17 C 200 2, 400 32, 600 17 S 1000 2, 1200 17" fill="none" stroke="#a8925a" stroke-width="1.2"/>
   </svg>
 
-  <!-- ============ REASONS ============ -->
   <section id="reasons">
     <div class="wrap">
       <div class="section__head reveal">
@@ -399,7 +384,6 @@
     <path d="M0 17 C 200 32, 400 2, 600 17 S 1000 32, 1200 17" fill="none" stroke="#6e7f5c" stroke-width="1.2"/>
   </svg>
 
-  <!-- ============ MENU ============ -->
   <section id="menu">
     <div class="wrap">
       <div class="section__head reveal">
@@ -443,7 +427,6 @@
     </div>
   </section>
 
-  <!-- ============ VOICES ============ -->
   <section class="section--sage" id="voices">
     <div class="wrap">
       <div class="section__head reveal">
@@ -471,7 +454,6 @@
     </div>
   </section>
 
-  <!-- ============ ACCESS ============ -->
   <section id="access">
     <div class="wrap">
       <div class="section__head reveal">
@@ -510,11 +492,10 @@
     <path d="M0 17 C 200 2, 400 32, 600 17 S 1000 2, 1200 17" fill="none" stroke="#7a3b41" stroke-width="1.2"/>
   </svg>
 
-  <!-- ============ FINAL CTA ============ -->
   <section class="final" id="reserve">
     <div class="wrap">
       <p class="eyebrow" style="justify-content:center;">reservation</p>
-      <h2>まずは、あなたの<br>「凪の時間」を。</h2>
+      <h2>まずは、あなたの<br>「結いの時間」を。</h2>
       <p>初めての方も、じっくりカウンセリングしてから施術に入ります。ご不安なことがあれば、事前にご相談ください。</p>
       <a class="btn" href="#">予約フォームへ進む</a>
     </div>
@@ -522,12 +503,11 @@
 
   <footer>
     <div class="wrap" style="width:100%; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-      <span>© nagi hair atelier</span>
+      <span>© yui hair atelier</span>
       <span>完全予約制</span>
     </div>
   </footer>
 
-  <!-- ============ STICKY RESERVATION BAR ============ -->
   <div class="stickybar">
     <div class="stickybar__text">
       <strong>本日 11:00–21:00 営業中</strong>
